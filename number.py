@@ -1,20 +1,35 @@
-# 날짜/시간과 관련된 기능을 가져옵니다.
-import datetime
+import turtle
 
-# 현재 날짜/시간을 구하고 
-# 쉽게 사용할 수 있게 월을 변수에 저장합니다.
-now = datetime.datetime.now()
-month = now.month
+## 전역 변수 선언 ##
+swidth, sheight = 500, 500
 
-#입력을 받습니다.
-month =int(input("월 입력>"))
+## 메인 코드 ##
+turtle.title('무지개색 원그리기')
+turtle.shape('turtle')
+turtle.setup(width = swidth + 50, height= sheight +50)
+turtle.screensize(swidth, sheight)
+turtle.penup()
+turtle.goto(0, -sheight/2)
+turtle.pendown()
+turtle.speed(10)
 
-#조건문으로 계절을 확인합니다.
-if 3 <= month <=5 :
-    print("현재는 봄입니다.")
-elif 6 <= month <= 8 :
-    print("현재는 여름입니다")
-elif 9 <= month <= 11 :
-    print("현재는 가을입니다.")
-else :
-    print("현재는 겨울입니다.")
+for radius in range(1, 250) :
+    if radius % 6 == 0 :
+        turtle.pencolor('red')
+    elif radius % 5 == 0 :
+        turtle.pencolor('orange')
+    elif radius % 4 == 0 :
+        turtle.pencolor('yellow')
+    elif radius % 3 == 0 :
+        turtle.pencolor('green')
+    elif radius % 2 == 0 :
+        turtle.pencolor('blue')
+    elif radius % 1 == 0 :
+        turtle.pencolor('navyblue')
+    else :
+        turtle.pencolor('purple')
+
+    turtle.circle(radius)
+
+turtle.done()
+

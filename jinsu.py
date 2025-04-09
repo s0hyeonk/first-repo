@@ -1,8 +1,8 @@
-sel=int(input("입력 진수 결정(16/10/8/2):"))
-num=(input("값 입력: "))
-num10 = int(num, sel)
-print("16진수 ==> ", hex(num10))
-print("10진수 ==> ", num10)
-print("8진수  ==> ", oct(num10))
-print("2진수  ==> ", bin(num10))
-    
+name=input("이름 입력 :")
+hello=input("안녕 혹은 안녕하세요 인사말 :")
+if hello== "안녕" :
+    print(f"안녕하세요 {name}님 만나서 반가워요!")
+elif hello== "안녕하세요" :
+    print(f"안녕하세요 {name}님 만나서 반가워요!")
+else :
+    print("인사나 해")
